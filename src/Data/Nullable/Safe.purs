@@ -53,6 +53,7 @@ instance neverNullNumber :: NeverNull Number
 instance neverNullString :: NeverNull String
 instance neverNullArray :: NeverNull (Array a)
 instance neverNullRecord :: NeverNull {| r}
+instance neverNullFunction :: NeverNull (a -> b)
 instance neverNullOrdering :: NeverNull Ordering
 instance neverNullMaybe :: NeverNull (Maybe a)
 
