@@ -4,14 +4,14 @@ module Test.Main
 
 import Data.Nullable.Safe
 
-import Control.Monad.Eff (Eff)
+import Effect (Effect)
 import Prelude (Unit, ($), (+), discard)
 import Test.Spec (describe, it)
 import Test.Spec.Assertions (shouldEqual, shouldNotEqual)
-import Test.Spec.Runner (RunnerEffects, run)
+import Test.Spec.Runner (run)
 import Test.Spec.Reporter.Tap (tapReporter)
 
-main :: ∀ eff. Eff (RunnerEffects eff) Unit
+main :: Effect Unit
 main = run [tapReporter] $
   describe "Data.Nullable.Safe" do
     describe "eq" $ do
